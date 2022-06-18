@@ -1,0 +1,87 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.work{
+  background-image: url('./assets/images/central-hub.png');
+}
+.slide{
+  min-width: none;
+}
+.react-multi-carousel-item--active div{
+  /* transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px); */
+  /* transition-duration: 0ms; */
+  /* transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(50deg) scale(1);
+  z-index: 0;
+  transform-style: preserve-3d;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition-property: transform; */
+}
+.modal-w640{
+  max-width: 640px;
+}
+#filtermodal{
+  z-index: 3001;
+}
+#filtermodal .modal-content{
+  background-color: rgb(255,255,255,0.9);
+}
+#filtermodal .modal-body{
+  padding:0px;
+}
+div.modal{
+  z-index: 3000;
+}
+
+@keyframes posterArrive {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* The element to apply the animation to */
+div.postershow {
+  animation-name: posterArrive;
+  animation-duration: 2s;
+}
+
+@keyframes posterHide {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+/* The element to apply the animation to */
+div.posterhide {
+  animation-name: posterHide;
+  animation-duration: 2s;
+}
+
+@keyframes posterRotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+/* The element to apply the animation to */
+.posterRotateLoop {
+  animation-name: posterRotate;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
